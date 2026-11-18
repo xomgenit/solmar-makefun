@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLMAR — Streets of the Sun</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div id="title-screen" class="overlay">
+    <div class="title-card">
+      <div class="sun"></div>
+      <h1>SOLMAR</h1>
+      <h2>STREETS OF THE SUN</h2>
+      <p class="tagline">An original open-world crime game in Solmar Bay.<br>
+      Steal cars. Outrun the SBPD. Run five jobs for Vera Santos —<br>
+      and pull off the Solmar Score.</p>
+      <div class="btn-row">
+        <button id="new-game-btn" class="btn primary">NEW GAME</button>
+        <button id="continue-btn" class="btn">CONTINUE</button>
+        <button id="howto-btn" class="btn">HOW TO PLAY</button>
+      </div>
+      <p class="controls-hint">WASD move &amp; drive · E interact · Mouse aim, click to shoot · Shift sprint · Space handbrake · Esc pause · M mute</p>
+      <p class="disclaimer">A fan-made original. Not affiliated with Rockstar Games or any commercial game.</p>
+    </div>
+  </div>
+
+  <div id="pause-menu" class="overlay hidden">
+    <div class="panel">
+      <h2>PAUSED</h2>
+      <p id="pause-stats" class="stats"></p>
+      <div class="btn-col">
+        <button id="resume-btn" class="btn primary">RESUME</button>
+        <button id="save-btn" class="btn">SAVE GAME</button>
+        <button id="restart-mission-btn" class="btn">RESTART MISSION</button>
+        <button id="quit-btn" class="btn danger">QUIT TO TITLE</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="howto-panel" class="overlay hidden">
+    <div class="panel wide">
+      <h2>HOW TO PLAY</h2>
+      <div class="howto-grid">
+        <div><b>WASD / Arrows</b><span>Walk, sprint with Shift, drive with W/S</span></div>
+        <div><b>Mouse</b><span>Aim on foot; hold click to shoot</span></div>
+        <div><b>E</b><span>Steal a car · grab the package · collect stashes · respray at the Auto Spa</span></div>
+        <div><b>Space</b><span>Handbrake — drift through corners</span></div>
+        <div><b>H</b><span>Honk</span></div>
+        <div><b>Esc / P</b><span>Pause — save, restart the mission, check stats</span></div>
+      </div>
+      <p class="tip">Tips: crimes only count when someone sees them. Lose the heat at the Sunset Auto Spa ($150) — or hide until it cools. Three hidden cash stashes ($300 each) are scattered around Solmar Bay. Finish Hot Delivery to unlock a sports car at the Hideout.</p>
+      <button id="howto-close" class="btn primary">GOT IT</button>
+    </div>
+  </div>
+
+  <div id="end-screen" class="overlay hidden">
+    <div class="panel">
+      <h2 id="end-title">WASTED</h2>
+      <p id="end-sub" class="stats"></p>
+      <button id="end-respawn-btn" class="btn primary">GET BACK UP</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="./src/main.mjs"></script>
+</body>
+</html>
